@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brightwell Solar | Rooftop solar for homes and businesses</title>
+  <meta name="description" content="Brightwell Solar designs, installs and maintains rooftop solar. Get a free estimate in two minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="6" fill="#ff9f1c"/><path d="M13 1v4M13 21v4M1 13h4M21 13h4M4.5 4.5l2.8 2.8M18.7 18.7l2.8 2.8M4.5 21.5l2.8-2.8M18.7 7.3l2.8-2.8" stroke="#ff9f1c" stroke-width="2" stroke-linecap="round"/></svg>Brightwell Solar</a>
+    <nav aria-label="Main">
+      <a href="#services">Services</a><a href="#process">How it works</a><a href="#faq">Questions</a>
+      <a class="btn small" href="#contact">Get a quote</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Stop paying for power you can make on your roof.</h1>
+        <p>We design, install and look after rooftop solar for homes, shops and small factories. One team from site visit to switch-on.</p>
+        <ul class="facts">
+          <li><b>1,200+</b> roofs installed</li>
+          <li><b>25 years</b> panel warranty</li>
+          <li><b>7 days</b> typical install</li>
+        </ul>
+      </div>
+
+      <form class="calc" id="calc" aria-labelledby="calc-title">
+        <h2 id="calc-title">What could you save?</h2>
+        <label for="bill">Your monthly electricity bill: <output id="bill-out"></output></label>
+        <input type="range" id="bill" min="1000" max="50000" step="500" value="6000">
+        <dl class="result" aria-live="polite">
+          <div><dt>Suggested system</dt><dd id="r-size"></dd></div>
+          <div><dt>Savings each month</dt><dd id="r-save"></dd></div>
+          <div><dt>Pays for itself in</dt><dd id="r-pay"></dd></div>
+        </dl>
+        <a class="btn primary" href="#contact">Get an exact quote</a>
+        <p class="fine">Estimate only. Your site visit gives the final figure.</p>
+      </form>
+    </section>
+
+    <section id="services">
+      <h2>What we do</h2>
+      <div class="rows">
+        <div><h3>Home rooftop solar</h3><p>Systems from 2 to 10 kW sized to your bill, with net metering paperwork handled for you.</p></div>
+        <div><h3>Business and factory</h3><p>Larger rooftops and ground mounts that cut daytime running costs and fix your energy price for years.</p></div>
+        <div><h3>Care and cleaning plans</h3><p>Scheduled panel cleaning, yearly inspections and fast repairs, so output stays where it should be.</p></div>
+      </div>
+    </section>
+
+    <section id="process">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>Site visit</h3><p>An engineer checks your roof, shade and meter. Free, about 40 minutes.</p></li>
+        <li><h3>Fixed quote</h3><p>You get a written price and expected output. No extras added later.</p></li>
+        <li><h3>Installation</h3><p>Most homes are done in a week, including approvals and meter change.</p></li>
+        <li><h3>Switch-on and support</h3><p>We train you on the app and stay on call for the life of the system.</p></li>
+      </ol>
+    </section>
+
+    <section id="faq">
+      <h2>Common questions</h2>
+      <details><summary>Does solar work on cloudy days?</summary><p>Yes, at lower output. Over a full year the system is sized so the total still covers the share of your bill we quote.</p></details>
+      <details><summary>What happens at night?</summary><p>You use grid power as before. With net metering, extra power you send out by day is credited against what you draw at night.</p></details>
+      <details><summary>How much maintenance is needed?</summary><p>Mostly cleaning. We recommend every one to two months in dusty areas, and our care plan covers it.</p></details>
+      <details><summary>Can I pay in instalments?</summary><p>Yes. We work with several lenders, and you can ask for a loan option in your quote.</p></details>
+    </section>
+
+    <section id="contact">
+      <h2>Get your free quote</h2>
+      <p class="intro">Tell us a little and we will call you within one working day.</p>
+      <form id="lead" class="lead" novalidate>
+        <label>Name<input name="name" autocomplete="name" required></label>
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Roof type<select name="roof"><option>Home</option><option>Shop or office</option><option>Factory or warehouse</option></select></label>
+        <label class="wide">Anything we should know?<textarea name="msg" rows="3"></textarea></label>
+        <button class="btn primary" type="submit">Request my quote</button>
+        <p id="lead-msg" class="fine" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Brightwell Solar</span>
+    <span>hello@brightwellsolar.example · +00 000 000 0000</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
